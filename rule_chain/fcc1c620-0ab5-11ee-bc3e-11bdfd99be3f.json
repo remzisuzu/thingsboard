@@ -80,12 +80,12 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 973,
-        "layoutY" : 200
+        "layoutX" : 965,
+        "layoutY" : 346
       },
       "configuration" : {
         "scriptLang" : "JS",
-        "jsScript" : "//               LAT                LON\n// sol üst köşe: 42.25549766981942, 25.92425777549310\n// sağ alt köşe: 36.41524656903434, 45.30414053319241\n\nvar lat = parseInt(msg.LAT) / 10000000;\nvar lon = parseInt(msg.LON) / 10000000;\n\nif (lat > 36 && lat < 42 && lon > 25 && lon < 45)\n{\n    msg.LAT = lat;\n    msg.LON = lon;\n\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
+        "jsScript" : "var lat = parseInt(msg.LAT) / 10000000;\nvar lon = parseInt(msg.LON) / 10000000;\n\nif (lat > 36 && lat < 42 && lon > 25 && lon < 45)\n{\n    msg.LAT = lat;\n    msg.LON = lon;\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};",
         "tbelScript" : "//               LAT                LON\n// sol üst köşe: 42.25549766981942, 25.92425777549310\n// sağ alt köşe: 36.41524656903434, 45.30414053319241\n\nvar lat = parseInt(msg.LAT) / 10000000;\nvar lon = parseInt(msg.LON) / 10000000;\n\nif (lat > 36 && lat < 42 && lon > 25 && lon < 45)\n{\n    msg.LAT = lat;\n    msg.LON = lon;\n\n}\n\nreturn {msg: msg, metadata: metadata, msgType: msgType};"
       },
       "configurationVersion" : 0,
@@ -103,8 +103,8 @@
     }, {
       "additionalInfo" : {
         "description" : "",
-        "layoutX" : 966,
-        "layoutY" : 313
+        "layoutX" : 1011,
+        "layoutY" : 479
       },
       "configuration" : {
         "defaultTTL" : 0,
@@ -130,9 +130,10 @@
       },
       "configuration" : {
         "scope" : "CLIENT_SCOPE",
-        "notifyDevice" : "false"
+        "notifyDevice" : "false",
+        "updateAttributesOnlyOnValueChange" : false
       },
-      "configurationVersion" : 0,
+      "configurationVersion" : 1,
       "createdTime" : 0,
       "debugMode" : false,
       "externalId" : null,
